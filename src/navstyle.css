@@ -1,0 +1,27 @@
+.nav-item {
+  margin: 0.25rem 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* To ensure space for the border animation */
+  color: black; /* Just for visibility */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Create a pseudo-element for the border animation */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: purple;
+  transition: width 0.3s ease;
+  z-index: -1; /* Place behind the text */
+}
+
+
+/* Animate the border on hover */
+.nav-item:hover::before {
+  width: 60%; /* Expand width on hover */
+}
