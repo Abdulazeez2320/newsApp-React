@@ -35,7 +35,7 @@ export default class App extends Component {
       
       <NavBar/>
       <Routes>
-      <Route path="/" element={<News pageSize={6} country="in" category="general" />} />
+      <Route exact path="/" key="home" element={<News pageSize={6} country="in" category="general" />} />
           <Route path="/business" element={<BusinessNews />} />
           <Route path="/entertainment" element={<EntertainmentNews />} />
           <Route path="/health" element={<HealthNews />} />
