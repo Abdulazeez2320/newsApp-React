@@ -2,11 +2,23 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date ,source} = this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } =
+      this.props;
     return (
       <div>
-        <div className="card">
-          <span className="position-absolute top-0 translate-middle badge rounded-pill bg-primary" style={{left:"90%",zIndex:2}}>
+        <div
+          className="card"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: 'flex-end',
+            position: "relative",
+          }}
+        >
+          <span
+            className="position-absolute badge rounded-pill bg-danger"
+            style={{ right: "0",top:"0", zIndex: 2 }}
+          >
             {source}
           </span>
           <img src={imageUrl} className="card-img-top" alt="..." />
