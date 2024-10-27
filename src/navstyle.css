@@ -6,7 +6,10 @@
   color: black; /* Just for visibility */
   text-decoration: none; /* Remove default underline */
 }
-
+.navbar-brand:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
 /* Create a pseudo-element for the border animation */
 .nav-item::before {
   content: "";
@@ -15,7 +18,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background-color: purple;
+  background-color: #C197D2;
   transition: width 0.3s ease;
   z-index: -1; /* Place behind the text */
 }
@@ -23,5 +26,14 @@
 
 /* Animate the border on hover */
 .nav-item:hover::before {
-  width: 60%; /* Expand width on hover */
+  width: 60%; 
+  /* Expand width on hover */
 }
+.nav-item .nav-link{
+  color: #E6E6FA !important;
+}
+.nav-item .nav-link:hover{
+  transform: scale(1.05);
+  color: #C197D2 !important;
+}
+
